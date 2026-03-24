@@ -1,7 +1,7 @@
 (function () {
   let initialized = false;
 
-  document.addEventListener("event:data:ready", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     if (initialized) return;
     initialized = true;
 
