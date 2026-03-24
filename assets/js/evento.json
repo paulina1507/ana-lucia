@@ -5,13 +5,13 @@
   "tipo_evento": "xv",
   "paquete": "armonia",
   "evento": {
-    "fecha": "2026-12-20T16:00:00",
+    "fecha": "2026-06-06T13:00:00",
     "host": {
-      "nombre": "Valeria"
+      "nombre": "Ana Lucía"
     }
   },
   "meta": {
-    "title": "Mis XV Años | Valeria",
+    "title": "Mis XV Años | Ana Lucía",
     "description": "Acompáñanos a celebrar mis XV años",
     "lang": "es",
     "favicon": "favicon.ico"
@@ -77,7 +77,7 @@
   "hero": {
     "enabled": true,
     "names": {
-      "festejada": "XV Valeria"
+      "festejada": "XV Ana Lucía"
     },
     "countdown_labels": {
       "dias": "Días",
@@ -90,7 +90,7 @@
   "presentacion": {
     "enabled": true,
     "titulo": "Tengo el honor de invitarte a celebrar mis XV años",
-    "nombres": "VALERIA",
+    "nombres": "ANA LUCÍA",
     "frase": "Con la bendición de Dios y en compañía de mis padres:",
     "padres": {
       "festejada": ["SARA ORTIZ HUERTA", "EMILIO HERNÁNDEZ FUENTES"]
@@ -110,22 +110,22 @@
       {
         "enabled": true,
         "tipo": "Ceremonia Religiosa",
-        "hora": "16:00 HRS",
-        "lugar": "Parroquia San José",
-        "direccion": ["Av. Principal 123", "Centro Histórico", "C.P. 62000"],
-        "mapa": "https://maps.google.com"
+        "hora": "13:00 HRS",
+        "lugar": "Parroquia de la Santísima Trinidad Tepango",
+        "direccion": ["C. 6 Sur 2,", "La Trinidad Tepango,", "74365 Atlixco, Pue."],
+        "mapa": "https://maps.app.goo.gl/HcezGWfbd4v5thhm7"
       },
       {
         "enabled": true,
         "tipo": "Fiesta",
         "hora": "18:00 HRS",
-        "lugar": "Salón La Concordia",
+        "lugar": "Salón Jardín El Relicario",
         "direccion": [
-          "Avenida Paseo de las Fuentes 46",
-          "Col. San Gaspar, Jiutepec Morelos",
-          "C.P. 62534"
+          "La Soledad 6,",
+          "San Diego Acapulco,",
+          "74365 Atlixco, Pue."
         ],
-        "mapa": "https://maps.google.com"
+        "mapa": "https://maps.app.goo.gl/UNbRrLwBLebn3mN37"
       }
     ]
   },
@@ -136,39 +136,27 @@
     "progress_steps": [20, 40, 60, 80, 100],
     "items": [
       {
-        "hora": "16:00 hrs",
+        "hora": "13:00 hrs",
         "texto": "Ceremonia Religiosa",
         "icono": "5.svg",
         "lado": "left"
       },
       {
-        "hora": "18:00 hrs",
+        "hora": "15:00 hrs",
         "texto": "Recepción",
         "icono": "6.svg",
         "lado": "right"
       },
       {
-        "hora": "19:00 hrs",
-        "texto": "Cena",
-        "icono": "7.svg",
-        "lado": "left"
-      },
-      {
-        "hora": "19:30 hrs",
-        "texto": "Brindis",
-        "icono": "3.svg",
-        "lado": "left"
-      },
-      {
-        "hora": "20:00 hrs",
+        "hora": "18:00 hrs",
         "texto": "Vals",
         "icono": "8.svg",
         "lado": "right"
       },
       {
-        "hora": "21:30 hrs",
-        "texto": "Partida de pastel",
-        "icono": "4.svg",
+        "hora": "21:00 hrs",
+        "texto": "Tornamesa",
+        "icono": "7.svg",
         "lado": "left"
       }
     ]
@@ -189,7 +177,7 @@
   "regalos": {
     "enabled": true,
     "titulo": "Sugerencia de Regalos",
-    "descripcion": "Tu presencia es el mejor regalo.<br>Si deseas obsequiarme algo, habrá una mesa de regalos en la fiesta.",
+    "descripcion": "Gracias por permitirme elegir mi regalo.",
     "items": [
       { "icono": "10.svg", "label": "Lluvia de Sobres" },
       { "icono": "11.svg", "label": "Regalo Sorpresa" }
@@ -205,8 +193,8 @@
     "enabled": true,
     "mode": "panel",
 
-    "telefono": "522212576641",
-    "mensaje_base": "Hola, confirmo mi asistencia a los XV años de Valeria.",
+    "telefono": "522441183165",
+    "mensaje_base": "Hola, confirmo mi asistencia a los XV años de Ana LucÍa.",
     "fecha_limite": "2026-12-10",
 
     "qr": { "enabled": true },
@@ -233,7 +221,7 @@
     "final": {
       "titulo": "¡Gracias por confirmar!",
       "texto": "Hemos reservado estos lugares en su honor.",
-      "firma": "XV Años Valeria"
+      "firma": "XV Años Ana Lucía"
     }
   },
   "editorial": {
