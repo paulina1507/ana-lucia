@@ -517,7 +517,6 @@ body.content-ready .navbar {
   inset: 0;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.9);
 }
 
 /* degradado elegante */
@@ -527,8 +526,10 @@ body.content-ready .navbar {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.25),
-    rgba(0, 0, 0, 0.55)
+    rgba(255, 105, 180, 0.5) 0%,
+    rgba(255, 182, 193, 0.1) 30%,
+    rgba(255, 182, 193, 0.1) 70%,
+    rgba(255, 105, 180, 0.55) 100%
   );
 }
 
@@ -727,97 +728,108 @@ body.content-ready .navbar {
   z-index: 10;
 }
 
-/* ================= BASE MARIPOSAS ================= */
-
-#presentacion .butterfly {
+/* CONTENEDOR */
+.butterflies {
   position: absolute;
-  width: clamp(70px, 12vw, 130px);
-  opacity: 0.22;
-  filter: blur(0.6px);
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* BASE */
+.butterfly {
+  position: absolute;
+  width: 72px;
+  opacity: 0.75;
+  will-change: transform;
+  backface-visibility: hidden;
+  animation: drift 9s ease-in-out infinite;
+}
+
+.butterfly img {
+  animation: flutter 2.4s ease-in-out infinite;
   transform-origin: center;
 }
 
-/* LADOS */
-#presentacion .butterfly.left {
-  left: -4%;
+.butterfly-left {
+  --r: -12deg;
+  top: 200px;
+  left: 4%;
+  transform: rotate(var(--r));
+  animation: drift 10s ease-in-out infinite;
+  animation-delay: -6s;
 }
 
-#presentacion .butterfly.right {
-  right: -4%;
+.butterfly-right {
+  animation: drift 9s ease-in-out infinite;
+  animation-delay: -5s;
+  --r: 14deg;
+  bottom: -30px;
+  right: 4%;
+  transform: rotate(var(--r));
 }
 
-/* izquierda superior */
-#presentacion .b1 {
-  top: 14%;
-  left: -4%;
-  transform: rotate(-18deg) scale(0.9);
+@keyframes flutter {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.04);
+  }
+
+  50% {
+    transform: scale(1.07);
+  }
+
+  75% {
+    transform: scale(1.04);
+  }
 }
 
-/* derecha media (más cerca del arco) */
-#presentacion .b2 {
-  top: 58%;
-  right: -2%;
-  transform: rotate(14deg) scale(0.95);
-}
-
-/* izquierda inferior (más afuera y ligera) */
-#presentacion .b3 {
-  top: 38%;
-  left: -10%;
-  transform: rotate(6deg) scale(0.8);
-  opacity: 0.16;
-}
-
-/* ================= MOVIMIENTO SUTIL ================= */
-
+/* ANIMACIÓN */
 @keyframes drift {
   0% {
-    transform: translateY(0) rotate(var(--r, 0deg));
+    transform: translate(0, 0) rotate(var(--r));
   }
-  50% {
-    transform: translateY(-12px) rotate(var(--r, 0deg));
+
+  20% {
+    transform: translate(18px, -22px) rotate(calc(var(--r) + 6deg));
   }
+
+  40% {
+    transform: translate(-12px, -40px) rotate(calc(var(--r) - 6deg));
+  }
+
+  60% {
+    transform: translate(22px, -32px) rotate(calc(var(--r) + 4deg));
+  }
+
+  80% {
+    transform: translate(-10px, -14px) rotate(calc(var(--r) - 3deg));
+  }
+
   100% {
-    transform: translateY(0) rotate(var(--r, 0deg));
+    transform: translate(0, 0) rotate(var(--r));
   }
 }
-
-#presentacion .butterfly {
-  animation: drift 14s ease-in-out infinite;
-}
-
-#presentacion .b1 {
-  animation-duration: 16s;
-}
-#presentacion .b2 {
-  animation-duration: 18s;
-}
-#presentacion .b3 {
-  animation-duration: 20s;
-}
-
-/* ================= MOBILE ================= */
 
 @media (max-width: 480px) {
-  #presentacion .butterfly {
-    width: 56px;
-    opacity: 0.15;
+  .butterfly-left {
+    --r: -12deg;
+    top: -20px;
+    left: 2%;
+    transform: rotate(var(--r));
   }
 
-  /* dejamos solo una a la derecha en móvil */
-  #presentacion .b3 {
-    display: none;
-  }
-
-  #presentacion .butterfly.left {
-    left: -18%;
-  }
-
-  #presentacion .butterfly.right {
-    right: -18%;
+  .butterfly-right {
+    --r: 14deg;
+    bottom: -30px;
+    right: 2%;
+    transform: rotate(var(--r));
   }
 }
-
 /* ========================================================= */
 /* PRESENTACIÓN  */
 /* ========================================================= */
@@ -2498,45 +2510,6 @@ body.footer-ready .music-btn {
   position: relative;
 }
 
-.section-arco .butterflies.outside {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 5;
-}
-
-/* ========================================================= */
-/* MARIPOSAS – BASE GLOBAL (FIX DEFINITIVO)                  */
-/* ========================================================= */
-
-.section-arco .butterflies.outside {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* TODAS las mariposas, en TODAS las secciones */
-.section-arco .butterfly {
-  position: absolute;
-  width: clamp(70px, 12vw, 130px);
-  opacity: 0.22;
-  filter: blur(0.6px);
-  transform-origin: center;
-}
-
-/* izquierda */
-.section-arco .butterfly.left {
-  left: -6%;
-}
-
-/* derecha */
-.section-arco .butterfly.right {
-  right: -6%;
-}
-
 /* variaciones */
 .section-arco .b1 {
   top: 18%;
@@ -2552,23 +2525,4 @@ body.footer-ready .music-btn {
   top: 72%;
   transform: rotate(6deg) scale(0.8);
   opacity: 0.16;
-}
-
-@media (max-width: 480px) {
-  .section-arco .butterfly {
-    width: 56px;
-    opacity: 0.15;
-  }
-
-  .section-arco .b3 {
-    display: none;
-  }
-
-  .section-arco .butterfly.left {
-    left: -18%;
-  }
-
-  .section-arco .butterfly.right {
-    right: -18%;
-  }
 }

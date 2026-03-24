@@ -378,7 +378,7 @@ fetch("assets/js/evento.json")
         let nota = rsvp.nota || "";
 
         if (rsvp.fecha_limite) {
-          const fecha = new Date(rsvp.fecha_limite);
+          const fecha = new Date(rsvp.fecha_limite + "T00:00:00");
 
           const fechaBonita = fecha.toLocaleDateString("es-MX", {
             day: "numeric",

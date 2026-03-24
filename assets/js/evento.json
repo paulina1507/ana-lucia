@@ -32,7 +32,7 @@
     "src": "cancion.mp3",
     "autoplay_on_open": true,
     "loop": true,
-    "volume": 1,
+    "volume": 0.5,
     "fade_in": true,
     "icons": {
       "play": "play.svg",
@@ -93,9 +93,9 @@
     "nombres": "ANA LUCÍA",
     "frase": "Con la bendición de Dios y en compañía de mis padres:",
     "padres": {
-      "festejada": ["SARA ORTIZ HUERTA", "EMILIO HERNÁNDEZ FUENTES"]
+      "festejada": ["Carolina Velázquez Fuentes", "Héctor Álvarez Mejía"]
     },
-    "padrinos": ["AURELIA RIVERA NIETO", "BERNARDO ORTEGA ORTIZ"],
+    "padrinos": ["Alejandra Velázquez Fuentes","Guadalupe Sebastián Velázquez"],
     "texto_final": "Este día marca una nueva etapa en mi vida y me encantaría compartirlo contigo.",
     "labels": {
       "padres": "Mis Padres",
@@ -179,7 +179,10 @@
     "titulo": "Sugerencia de Regalos",
     "descripcion": "Gracias por permitirme elegir mi regalo.",
     "items": [
-      { "icono": "10.svg", "label": "Lluvia de Sobres" },
+      {
+        "icono": "10.svg",
+        "label": "Lluvia de sobres"
+      },
       { "icono": "11.svg", "label": "Regalo Sorpresa" }
     ]
   },
@@ -247,10 +250,10 @@
     },
     "regalos": {
       "enabled": true,
-      "text": "Tu compañía es lo más importante"
+      "text": "Lo más importante para mí es compartir este día contigo"
     },
     "galeria": {
-      "enabled": true,
+      "enabled": false,
       "text": "Momentos que forman mi historia"
     },
     "rsvp": {
