@@ -615,7 +615,7 @@ body.content-ready .navbar {
   }
 
   .hero-count small {
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 1px;
   }
 
@@ -1581,11 +1581,31 @@ body.content-ready .navbar {
 }
 
 .carousel-btn.left {
-  left: 12px;
+  left: 9px;
 }
 
 .carousel-btn.right {
-  right: 12px;
+  right: 9px;
+}
+
+@media (max-width: 480px) {
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+
+    box-shadow:
+      0 6px 14px rgba(0,0,0,0.18),
+      0 0 8px rgba(228,145,166,0.3);
+  }
+
+  .carousel-btn.left {
+    left: 6px;
+  }
+
+  .carousel-btn.right {
+    right: 6px;
+  }
 }
 /* ========================================================= */
 /* FOOTER */
